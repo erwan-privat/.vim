@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/archaoss/Arduino/libraries/RBDDimmer-master'
+let g:netrw_dirhist_0='/home/archaoss/.config/ncdu'
+let g:netrw_dirhist_9='/home/archaoss/.config'
+let g:netrw_dirhist_8='/home/archaoss'
+let g:netrw_dirhist_7='/home/archaoss/Arduino/libraries/U8g2/examples/games'
+let g:netrw_dirhist_6='/home/archaoss/Arduino/libraries/U8g2/examples/games/LittleRookChess'
+let g:netrw_dirhist_5='/home/archaoss/Arduino/libraries/U8g2/examples/games'
+let g:netrw_dirhist_4='/home/archaoss/Arduino/arduino-makefile/blink-arduino'
+let g:netrw_dirhist_3='/home/archaoss/tmp'
+let g:netrw_dirhist_2='/home/eprivat/projects/ep/bin'
