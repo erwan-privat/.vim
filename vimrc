@@ -14,8 +14,8 @@ set mouse=a
 set list
 set listchars=tab:>·
 set background=dark
-set textwidth=60
-set colorcolumn=61
+set textwidth=69
+" set colorcolumn=61
 set number
 set nu
 set smartindent
