@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'dag/vim-fish'
 Plug 'lervag/vimtex'
 Plug 'nanotee/zoxide.vim' 
-Plug 'Archaoss/vim-commentary'
+Plug 'erwan-privat/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'drmikehenry/vim-headerguard'
 Plug 'habamax/vim-godot'
@@ -53,23 +53,11 @@ aug python
   au FileType python setlocal ts=2 sts=2 sw=2 noexpandtab
 aug end
 
-" Use Archaoss/vim-comment now
+" Use erwan-privat/vim-comment now
 autocmd FileType arduino,h,cpp setlocal commentstring=//\ %s
-" Commenting blocks of code. Default is '# '
-" augroup commenting_blocks_of_code
-"   au!
-"   au FileType c,cpp,java let b:comment_leader = '// '
-"   au FileType scilab     let b:comment_leader = '// '
-"   au FileType arduino    let b:comment_leader = '// '
-"   au FileType fortran    let b:comment_leader = '! '
-"   au FileType tex,matlab let b:comment_leader = '% '
-"   au FileType vim        let b:comment_leader = '" '
-"   au FileType dosini     let b:comment_leader = '; '
-" augroup END
-
-" noremap <silent> <leader>cc :<C-B>silent <C-E>s/^\( *\)/\1<C-R>=escape(get(b:, 'comment_leader', '# '),'\/')<CR>/<CR>:nohlsearch<CR>
-" noremap <silent> <leader>cu :<C-B>silent <C-E>s/^\( *\)\V<C-R>=escape(get(b:, 'comment_leader', '# '),'\/')<CR>/\1/e<CR>:nohlsearch<CR>
 noremap <leader>y "+y
+set rnu
+noremap <leader>n :set rnu!<CR>
 noremap <silent> <leader>p "+p
 
 color gruvbox
