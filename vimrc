@@ -1,12 +1,15 @@
 call plug#begin()
 
 Plug 'dag/vim-fish'
+Plug 'drmikehenry/vim-headerguard'
+Plug 'erwan-privat/vim-commentary'
+Plug 'github/copilot.vim'
+Plug 'goerz/jupytext.vim'
+Plug 'habamax/vim-godot'
+Plug 'jiangmiao/auto-pairs'
+Plug 'jupyter-vim/jupyter-vim'
 Plug 'lervag/vimtex'
 Plug 'nanotee/zoxide.vim' 
-Plug 'erwan-privat/vim-commentary'
-Plug 'jiangmiao/auto-pairs'
-Plug 'drmikehenry/vim-headerguard'
-Plug 'habamax/vim-godot'
 
 call plug#end()
 
@@ -92,6 +95,7 @@ nmap <F4> O#!/usr/bin/env bash<CR><CR>
 " nmap <F5> "ayiw:e <C-r>a.sci<CR>ifunction <C-r>a()<CR><CR>endfunction<ESC>gg<F3><ESC><ESC>kko// 
 " cpp header guard
 nmap <F5> :HeaderguardAdd<CR>
+nmap <F6> O#!/usr/bin/env python3<CR><CR>if __name__ == "__main__":<CR>pass
 " nmap <F9> :silent !tmux send-keys -t :.+ "./<C-r>%" Enter<CR> <C-l>
 
 augroup scilab
@@ -134,3 +138,8 @@ function! Toggle_transparent_background()
   endif
 endfunction
 nnoremap <F10> :call Toggle_transparent_background()<CR>
+
+" Windows Terminal cursor fix
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
