@@ -1,21 +1,22 @@
 call plug#begin()
 
 Plug 'dag/vim-fish'
+Plug 'dense-analysis/ale'
 Plug 'drmikehenry/vim-headerguard'
 Plug 'erwan-privat/vim-commentary'
-Plug 'github/copilot.vim'
-Plug 'goerz/jupytext.vim'
+" Plug 'goerz/jupytext.vim'
 Plug 'habamax/vim-godot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jupyter-vim/jupyter-vim'
-Plug 'lervag/vimtex'
 Plug 'nanotee/zoxide.vim' 
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
 set mouse=a
-set list
-set listchars=tab:>·
+set list listchars=tab:>·,trail:·
 set background=dark
 set textwidth=69
 " set colorcolumn=61
@@ -29,6 +30,8 @@ set shiftwidth=2
 set expandtab
 " set vb
 set hlsearch
+set ignorecase
+set smartcase
 set hidden
 set t_ut=
 set t_Co=256
@@ -56,7 +59,6 @@ aug python
   au FileType python setlocal ts=2 sts=2 sw=2 noexpandtab
 aug end
 
-" Use erwan-privat/vim-comment now
 autocmd FileType arduino,h,cpp setlocal commentstring=//\ %s
 noremap <leader>y "+y
 set rnu
@@ -95,14 +97,23 @@ nmap <F4> O#!/usr/bin/env bash<CR><CR>
 " nmap <F5> "ayiw:e <C-r>a.sci<CR>ifunction <C-r>a()<CR><CR>endfunction<ESC>gg<F3><ESC><ESC>kko// 
 " cpp header guard
 nmap <F5> :HeaderguardAdd<CR>
-nmap <F6> O#!/usr/bin/env python3<CR><CR>if __name__ == "__main__":<CR>pass
+nmap <F6> O#!/usr/bin/env python3<CR><CR>def main() -> None:<CR>pass<CR><CR><CR>if __name__ == "__main__":<CR>main()<DEL>
 " nmap <F9> :silent !tmux send-keys -t :.+ "./<C-r>%" Enter<CR> <C-l>
+let g:UltiSnipsExpandTrigger="<S-Tab>"
+" list all snippets for current filetype
+let g:UltiSnipsListSnippets="<C-L>"
+
 
 augroup scilab
   au!
   " 1;6B is C-S-Down
   au FileType scilab imap [1;6B <Space>..<CR><Space><Space>
   au FileType scilab nmap [1;6B i<Space>..<CR><Space><Space><ESC><ESC>
+augroup END
+
+augroup latex
+  au!
+  noremap \b ciw\begin{<C-R>"}<CR>\end{<C-R>"}<ESC><ESC>O
 augroup END
 
 " set nofoldenable
