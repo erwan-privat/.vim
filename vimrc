@@ -1,9 +1,16 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
 
 Plug 'dag/vim-fish'
 Plug 'dense-analysis/ale'
 Plug 'drmikehenry/vim-headerguard'
 Plug 'erwan-privat/vim-commentary'
+Plug 'github/copilot.vim'
 " Plug 'goerz/jupytext.vim'
 Plug 'habamax/vim-godot'
 Plug 'jiangmiao/auto-pairs'
@@ -19,7 +26,7 @@ set mouse=a
 set list listchars=tab:>·,trail:·
 set background=dark
 set textwidth=69
-" set colorcolumn=61
+set colorcolumn=70
 set number
 set nu
 set smartindent
