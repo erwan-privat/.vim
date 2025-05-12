@@ -154,7 +154,7 @@ function! Toggle_transparent_background()
     let t:is_transparent = 0
   endif
 endfunction
-nnoremap <F10> :call Toggle_transparent_background()<CR>
+nnoremap <F9> :call Toggle_transparent_background()<CR>
 
 " Windows Terminal cursor fix
 let &t_SI = "\<Esc>[6 q"
