@@ -154,3 +154,7 @@ nnoremap <F9> :call Toggle_transparent_background()<CR>
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
+
+" Fix for 105 keyboard for missing <> key in AZERTY
+imap Oj <
+imap O2j >
