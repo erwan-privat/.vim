@@ -36,7 +36,6 @@ set hidden
 set t_ut=
 set t_Co=256
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=0
 
 let mapleader=','
 let maplocalleader=','
@@ -67,6 +66,10 @@ noremap <silent> <leader>p "+p
 
 color gruvbox
 let g:airline#extensions#tabline#enabled = 1
+
+highlight CursorLine cterm=NONE ctermbg=0
+highlight clear SpellBad
+highlight SpellBad ctermfg=Cyan cterm=bold
 
 set pastetoggle=<F2>
 imap <NUL> <C-Space>
