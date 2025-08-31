@@ -36,6 +36,7 @@ set hidden
 set t_ut=
 set t_Co=256
 set cursorline
+set nojs
 
 let mapleader=','
 let maplocalleader=','
