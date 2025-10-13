@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'dag/vim-fish'
+Plug 'kaarmu/typst.vim'
 Plug 'dense-analysis/ale'
 Plug 'drmikehenry/vim-headerguard'
 Plug 'erwan-privat/vim-commentary'
