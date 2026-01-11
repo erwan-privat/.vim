@@ -5,14 +5,14 @@ Plug 'kaarmu/typst.vim'
 Plug 'dense-analysis/ale'
 Plug 'drmikehenry/vim-headerguard'
 Plug 'erwan-privat/vim-commentary'
-" Plug 'goerz/jupytext.vim'
 Plug 'habamax/vim-godot'
-Plug 'jiangmiao/auto-pairs'
-Plug 'jupyter-vim/jupyter-vim'
+" Plug 'jiangmiao/auto-pairs'
+" Plug 'jupyter-vim/jupyter-vim'
 Plug 'nanotee/zoxide.vim' 
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'kaarmu/typst.vim'
 
 call plug#end()
 
