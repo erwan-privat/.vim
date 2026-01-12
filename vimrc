@@ -38,6 +38,7 @@ set t_ut=
 set t_Co=256
 set cursorline
 set nojs
+set spell
 
 let mapleader=','
 let maplocalleader=','
